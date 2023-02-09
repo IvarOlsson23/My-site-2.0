@@ -1,0 +1,11 @@
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #595959;
+  z-index: 3;
+  animation: curtainSlide 1.4s;
+  transform: translate(-100%);
+}

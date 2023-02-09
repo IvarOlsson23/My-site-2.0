@@ -1,0 +1,287 @@
+// COLORS //
+
+$SoftWhite: #e9e8e7;
+$SoftBlack: #333333;
+
+// TYPOGRAPHY //
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600;700;800;900&display=swap");
+
+//font size
+$heading-1-font-size: 52px;
+$heading-2-font-size: 50px;
+$heading-3-font-size: 36px;
+$body-font-size: 24px;
+$button-font-size: 50px;
+//Mobile
+$heading-1-font-size-mobile: 40px;
+$heading-2-font-size-mobile: 40px;
+$heading-3-font-size-mobile: 30px;
+$body-font-size-mobile: 20px;
+$button-font-size-mobile: 32px;
+
+//line height
+//font weight
+$heading-1-font-weight: 900;
+$heading-2-font-weight: 500;
+$heading-3-font-weight: 500;
+$body-font-weight: 600;
+$caption-font-weight: 400;
+$button-font-weight: 700;
+//Mobile
+$heading-1-font-weight-mobile: 900;
+$heading-2-font-weight-mobile: 500;
+$heading-3-font-weight-mobile: 500;
+$body-font-weight-mobile: 400;
+$caption-font-weight-mobile: 400;
+$button-font-weight-mobile: 700;
+
+//letter spacing
+$heading-1-letter-spacing: 0;
+$heading-2-letter-spacing: 0;
+$heading-3-letter-spacing: 0;
+$body-letter-spacing: 1px;
+$caption-letter-spacing: 0;
+$button-letter-spacing: 4px;
+//Mobile
+$heading-1-letter-spacing-mobile: 0;
+$heading-2-letter-spacing-mobile: 0;
+$heading-3-letter-spacing-mobile: 0;
+$body-letter-spacing-mobile: 1px;
+$caption-letter-spacing-mobile: 0;
+$button-letter-spacing-mobile: 6px;
+
+@mixin font-package-button {
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  letter-spacing: $button-letter-spacing;
+}
+@mixin font-package-button-mobile {
+  font-size: $button-font-size-mobile;
+  font-weight: $button-font-weight-mobile;
+  letter-spacing: $button-letter-spacing-mobile;
+}
+@mixin font-package-body {
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+}
+@mixin font-package-body-mobile {
+  font-size: $body-font-size-mobile;
+  font-weight: $body-font-weight-mobile;
+}
+@mixin font-package-heading {
+  font-size: $heading-1-font-size;
+  font-weight: $heading-1-font-weight;
+}
+@mixin font-package-heading-mobile {
+  font-size: $heading-1-font-size-mobile;
+  font-weight: $heading-1-font-weight-mobile;
+}
+@mixin font-package-heading2 {
+  font-size: $heading-2-font-size;
+  font-weight: $heading-2-font-weight;
+}
+@mixin font-package-heading2-mobile {
+  font-size: $heading-2-font-size-mobile;
+  font-weight: $heading-2-font-weight-mobile;
+}
+@mixin font-package-heading3 {
+  font-size: $heading-3-font-size;
+  font-weight: $heading-3-font-weight;
+}
+@mixin font-package-heading3-mobile {
+  font-size: $heading-3-font-size-mobile;
+  font-weight: $heading-3-font-weight-mobile;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  color: $SoftBlack;
+}
+button {
+  width: 50px;
+  height: 50px;
+}
+.main-wrapper {
+  width: 80%;
+  height: 95vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+}
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.name-heading {
+  display: flex;
+  gap: 10px;
+}
+.nav-button {
+  @include font-package-button;
+  text-decoration: none;
+  text-shadow: 3px 4px 8px rgba(51, 51, 51, 0.53);
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+  color: $SoftBlack;
+}
+a:hover {
+  border-bottom: 2px solid rgb(102, 102, 102);
+  animation: hover 1s;
+  transition: border-bottom 0.2s ease-in-out;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin-top: 30px;
+  padding: 0;
+}
+
+.nav-toggle-btn {
+  display: none;
+}
+
+.marble {
+  background: url(./assets/marble.png) no-repeat center;
+  position: absolute;
+  bottom: 100px;
+  right: 150px;
+  width: 140px;
+  height: 80px;
+}
+@media screen and (max-width: 900px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-wrapper {
+    width: 100%;
+  }
+
+  .nav-button {
+    @include font-package-button-mobile;
+  }
+
+  .main-wrapper {
+    height: 100%;
+    margin-top: 100px;
+  }
+
+  .logo {
+    background: url(./assets/logo.png) no-repeat center;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 130px;
+    height: 80px;
+  }
+
+  .marble {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 140px;
+    height: 80px;
+  }
+
+  .shadow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav {
+    width: 80%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: rgb(248, 248, 248);
+    z-index: 10;
+    opacity: 0.97;
+    animation: navSlide 1s;
+    @media (max-width: 900px) {
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+  }
+  .nav-inside {
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    display: block;
+    border: none;
+    background: none;
+  }
+
+  .marble {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    width: 100px;
+    height: 80px;
+  }
+}
+
+//ANIMATIONS GLOBAL
+
+@keyframes slideRight {
+  0% {
+    transform: translate(10%);
+  }
+}
+@keyframes navSlide {
+  0% {
+    transform: translate(100%);
+  }
+}
+
+@keyframes curtainSlide {
+  0% {
+    transform: translate(0%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+
+@keyframes hover {
+  0% {
+    margin: 2px;
+  }
+}

@@ -1,0 +1,26 @@
+.home-wrapper {
+  width: 100%;
+  justify-content: center;
+  object-fit: contain;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.home-content-container {
+  width: 300px;
+}
+
+@media screen and (max-width: 900px) {
+  .home-wrapper {
+  }
+  .home-image {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-wrapper {
+  }
+}

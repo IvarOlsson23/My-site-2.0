@@ -1,0 +1,11 @@
+@import "../../App.scss";
+.text-wrapper {
+  @include font-package-body;
+  z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+  .text-wrapper {
+    @include font-package-body-mobile;
+  }
+}

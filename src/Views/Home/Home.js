@@ -15,7 +15,7 @@ const Home = () => {
       >
         <img
           className="home-image"
-          src={require("../../assets/Home-image.png")}
+          src={require("../../assets/Home-image.webp")}
           alt="Home page, art style puppet"
         />
       </motion.div>

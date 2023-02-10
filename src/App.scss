@@ -97,6 +97,11 @@ $button-letter-spacing-mobile: 6px;
   margin: 0;
   padding: 0;
 }
+#root {
+  --swiper-theme-color: rgb(24, 24, 24);
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-font-weight: 10px;
+}
 body {
   font-family: "Outfit", sans-serif;
   color: $SoftBlack;
